@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuildMart - Material Procurement</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <h2>🏗️ BuildMart</h2>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#materials">Materials</a>
+            <a href="#orders">Orders</a>
+        </nav>
+        <button class="cart-btn" onclick="viewCart()">
+        🛒 Cart (<span id="cart-count">0</span>)
+    </button>
+    </header>
+
+    <section class="hero" id="home">
+        <div>
+            <p class="tagline">YOUR CONSTRUCTION PARTNER</p>
+            <h1>Building Your Dreams,<br>One Material at a Time.</h1>
+            <p>Find quality construction materials at competitive prices.</p>
+            <a href="#materials" class="primary-btn">Explore Materials</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div>🚚 <strong>Easy Procurement</strong>
+            <p>Simple ordering process</p>
+        </div>
+        <div>💰 <strong>Best Prices</strong>
+            <p>Compare material prices</p>
+        </div>
+        <div>☁️ <strong>Cloud Ready</strong>
+            <p>Access from anywhere</p>
+        </div>
+    </section>
+
+    <main id="materials">
+        <h2>Construction Materials</h2>
+        <p class="subtitle">Choose the materials you need for your project.</p>
+
+        <div class="toolbar">
+            <input type="text" id="search" placeholder="Search materials..." oninput="displayMaterials()">
+
+            <select id="category" onchange="displayMaterials()">
+            <option value="All">All Categories</option>
+            <option value="Cement">Cement</option>
+            <option value="Steel">Steel</option>
+            <option value="Bricks">Bricks</option>
+            <option value="Sand">Sand</option>
+            <option value="Gravel">Gravel</option>
+        </select>
+        </div>
+
+        <div id="material-list" class="product-grid"></div>
+    </main>
+
+    <section id="orders" class="orders">
+        <h2>Why Choose BuildMart?</h2>
+        <p>Manage construction material procurement from one convenient platform.</p>
+        <p>✔ Easy material selection &nbsp; ✔ Transparent pricing &nbsp; ✔ Quick ordering</p>
+    </section>
+
+    <footer>
+        <p>© 2026 BuildMart | Cloud-Based Building Material Procurement Platform</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
